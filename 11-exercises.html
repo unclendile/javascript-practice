@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercises</title>
+  </head>
+  <body>
+    <div>
+      <input placeholder="enter name" onkeydown="addName(names)">
+      <div class="js-output"></div>
+
+    </div>
+
+    <script>
+      const names = ['andile','jali'];
+      function addName(array){
+        
+        let value = '';
+        const name = document.querySelector('input').value;
+        const output = document.querySelector('.js-output');
+
+        for(let i = 0; i < array.length; i++){
+          const item = array[i];
+          value = item;
+          
+        }
+        
+        if(event.key === 'Enter'){
+          if(name === value){
+            output.innerHTML = `${name} already exist`;
+          }
+          else{
+            array.push(value);
+          }
+          
+          (output.innerHTML = array);
+        }
+        return output.innerHTML = array;
+      }
+      /*
+      //11a
+      const nums = [10,20,30,70,60];
+      nums[2] = 99;
+      console.log(nums);
+
+      //11b
+      function getLastValueCorrection(array){
+        const lastIndex = array.length - 1;
+        return array[lastIndex];
+      }
+
+      console.log(getLastValueCorrection(['hey','mo','lo']));
+
+
+
+
+       function getLastValue(array){
+      
+        for(let i = 0; i < array.length;i++){
+          const item = array[i];
+        
+
+          if(item === array[array.length-1])
+          return item;
+
+        }
+        //console.log(value)
+      }
+
+      console.log(getLastValue(['hey','ba','be']));
+      console.log(getLastValue(nums))
+
+
+      //11c
+      function arraySwap(array){
+        let values = [];
+        let value = '';
+        for (let i = array.length -1; i >=0; i--) {
+          const element = array[i];
+          values.push(element);
+          value += element +'\n';
+          
+        }
+        return console.log(values +'\n' + value);
+      }
+      arraySwap([10,20,30]);
+      arraySwap(['andile','ndu','zum']);
+
+      function switchFirstLastValues(array){
+        const lastIndex = array.length - 1;
+
+        const lastValue = array[lastIndex];
+        const firstValue = array[0];
+
+        array[0] = lastValue;
+        array[lastIndex] = firstValue;
+
+        return array;
+      }
+      console.log(switchFirstLastValues([1, 20, 22, 24, 5]));
+      */
+
+      /*
+      //11d
+      let i = 0;
+      while(i <= 10){
+        console.log(i);
+        i+=2;
+      }
+
+      for (let index = 0; index <= 10; index+=2) {
+        console.log(index)
+        
+      }
+
+      //11e
+      let index = 5;
+      while(index >= 0){
+        console.log(index);
+        index--;
+      }
+
+      for (let index = 5; index >= 0; index--) {
+        console.log(index)
+        
+      }
+
+      //11g
+      const numbers = [1,2,3];
+      const number = [];
+      for (let index = 0; index < numbers.length; index++) {
+        const element = numbers[index];
+        number.push(element+1);        
+      }
+      console.log(number);
+
+      //11h
+      function addOne(array){
+        const values = [];
+        for (let index = 0; index < array.length; index++) {
+          const element = array[index];
+          values.push(element+1);        
+        }
+        return values;
+      }
+      console.log(addOne([1, 2, 5]));
+      console.log(addOne([-2, -1, 0, 99]));
+      */
+
+      /*
+      //11i
+      function addNum(array, num){
+        const results = [];
+
+        for(let i = 0; i < array.length; i++){
+          const element = array[i];
+          results.push(element+num);
+        }
+        return console.log(results);
+      }
+      addNum([1,2,3],2);
+
+      //11j
+      function addArrays(array1,array2){
+        const results = [];
+        for(let i = 0; i < array1.length; i++){
+          const element = array1[i];
+          results.push(array1[i]+ array2[i]);
+          
+        }
+        return results;
+      }
+      console.log(addArrays([2,2,4],[1,1,4]));
+
+      //11k
+      function countPositive(nums){
+        let count = 0;
+        for (let i = 0; i < nums.length; i++) {
+          if(nums[i] > 0){
+          count++;
+          }          
+        }
+        return count;
+      }
+      console.log(countPositive([1,-3,-1,3,4]));
+      */
+
+      /*
+      //11l
+      function minMax(nums){
+        const results = {
+          minValue: nums[0] || null,
+          maximun: nums[0] || null
+        }
+
+        for(let i = 0; i < nums.length; i++){
+          const element = nums[i];
+          if(element < results.minValue){
+            results.minValue = element;
+          }
+          if(element > results.maximun){
+            results.maximun = element;
+          }
+          if(!nums){
+            return results;
+          }
+
+        }
+        return results;
+      }
+      console.log(minMax([-1,0,2,4,-5,7,2,10,11,3]));
+      console.log(minMax([]));
+      console.log(minMax([1]));
+
+      function countWords(words){
+        const results = {};
+
+        for(let i = 0; i < words.length; i++){
+          if(!results[words[i]]){
+            results[words[i]] = 1;
+          }else{
+            results[words[i]]++;
+          }
+        }
+
+        return results;
+      }
+
+console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+*/
+      
+    </script>
+  </body>  
+</html>

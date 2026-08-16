@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <p>Todo List</p>
+    <input placeholder="Todo" class="js-todo"/>
+    <input type="date" class="js-date" />
+    <button onclick="addTodo()">ADD</button>
+    <div class="js-output"></div>
+    <p class="js-error"></p>
+
+    <script>
+
+      const todoList = [{id:'wash',date:'2026/07/07'}];
+      const outputElem = document.querySelector('.js-output');
+      const errorElem = document.querySelector('.js-error');
+      
+
+      displayList();
+
+      function addTodo(){
+        const dateElem = document.querySelector('.js-date');
+        const todoElem = document.querySelector('.js-todo');
+
+        const todoName = todoElem.value;
+        const dueDate = dateElem.value;
+
+
+        if((todoElem.value && dateElem.value)){
+          todoList.push({id:todoName,date:dueDate});
+        }
+        else{
+          errorElem.innerHTML = 'Invalid';
+        }
+
+        dateElem.value = '';
+        todoElem.value = '';
+        
+        console.log(todoList);
+        
+        displayList();
+        
+      }
+     
+      
+      function displayList(){
+
+        let todoListHTML = '';
+
+        for(let i = 0; i < todoList.length; i++){
+          const todo = todoList[i];
+
+          const html = `<p> ${todo.id} ${todo.date} <button onclick="removeTodoList(${i})">Delete</button></p>`;
+          todoListHTML += html;
+
+        }
+        console.log(todoListHTML);
+        outputElem.innerHTML = todoListHTML;
+      }
+
+      function removeTodoList(index){
+        todoList.splice(index,1);
+        displayList();
+      }
+      
+    </script>
+  </body>  
+</html>

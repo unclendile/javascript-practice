@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <h1>Booleans</h1>
+    <p>Booleans are a data type that can only have two values: true or false. They are often used in conditional statements to control the flow of a program.</p>
+    <p>In JavaScript, you can create a boolean value by using the keywords true or false. For example:</p>
+    <pre>
+      <code>
+        let isRaining = true;
+        let isSunny = false;
+        Alert(5>3);
+      </code>
+    </pre> 
+
+    <h1>Comparison Operators</h1>
+    <p>Comparison operators are used to compare values and return a boolean result. Here are some common comparison operators in JavaScript:</p>
+    <ul>
+      <li><code>===</code> - Strict equality</li>
+      <li><code>!==</code> - Strict inequality</li>
+      <li><code>></code> - Greater than</li>
+      <li><code><</code> - Less than</li>
+      <li><code>>=</code> - Greater than or equal to</li>
+      <li><code><=</code> - Less than or equal to</li>
+    </ul>
+
+    <h1>Logical Operators</h1>
+    <p>Logical operators are used to combine boolean values and return a boolean result. Here are some common logical operators in JavaScript:</p>
+    <ul>
+      <li><code>&&</code> - AND</li>
+      <li><code>||</code> - OR</li>
+      <li><code>!</code> - NOT</li>
+    </ul> 
+
+    <h1>Truthy and Falsy Values</h1>
+    <p>In JavaScript, some values are considered "truthy" and some are considered "falsy". A truthy value is a value that is considered true when evaluated in a boolean context, while a falsy value is a value that is considered false. Here are some examples of truthy and falsy values:</p>
+    <ul>  
+      <li>Truthy values: non-empty strings, non-zero numbers, objects, arrays, true</li>
+      <li>Falsy values: empty strings, 0, null, undefined, false</li>   
+
+      <h1>Conditional Statements</h1>
+      <p>Conditional statements are used to execute different code based on certain conditions. The most          
+common conditional statement in JavaScript is the if statement. Here is an example:</p>
+      <pre>         
+
+        <code>
+          let age = 18;
+          if (age >= 18) {
+            console.log("You are an adult.");
+          } else {
+            console.log("You are a minor.");
+          }
+        </code> 
+
+        <h1>Shortcuts for if statements</h1>
+        <p>There are also some shortcuts for if statements in JavaScript. Here are some examples:</p>
+        <ul>  
+          <li><code>condition ? valueIfTrue : valueIfFalse</code> - Ternary operator ?:</li>
+          <li><code>condition && valueIfTrue</code> - Guard Operator &&</li>
+          <li><code>condition || valueIfFalse </code> -Default Operator ||</li> 
+
+    <script>
+      if(30 >= 16){
+        console.log("You are an adult.");
+      } else {
+        console.log("You are a minor.");
+      }
+
+      console.log(30 >= 16 ? "You are an adult.":"You are a minor.");
+      console.log(30 <= 16 && "You are an adult."); 
+      console.log(30 < 16 || "You are a minor.");
+    </script>
+  </body> 
+</html>

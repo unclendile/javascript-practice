@@ -1,0 +1,99 @@
+body{
+  background-color: black;
+  font-family: Arial;
+  color: white;
+  margin-top: 10px;
+}
+.amazon-div-btn{
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 155px;
+  margin-bottom: 40px;
+  
+}
+.cart-btn{
+  border: none;
+  background-color: rgb(255,216,20);
+  font-size: 15px;
+  border-radius: 15px;
+  padding: 5px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.uber-div-btn{
+  background-color: white;
+  width: 375px;
+  padding: 10px;
+  margin-bottom: 30px;
+
+}
+.request-btn{
+  background-color: black;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  margin-right: 10px;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+}
+.schedule-btn{
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  width: 200px;
+  font-size: 15x;
+  font-weight: bold;
+  cursor: pointer;
+}
+div{
+  margin-top: 50px;
+}
+
+.div-gaming-btn{
+  background-color: white;
+  width: 78px;
+  padding: 10px;
+}
+.gaming-btn{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+.is-toggled{
+  background-color: lightgray;
+  color: black;
+
+}
+.div-three-btn{
+  background-color: white;
+  padding: 10px;
+  width: 250px;
+}
+.three-btn{
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.is-toggled-btn{
+  background-color: lightgray;
+  color: black;
+}

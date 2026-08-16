@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show Cart Quantity</title>
+  </head>
+  <body>
+    <h1>
+      Cart Quantity
+    </h1>
+
+    <button id="quantity" onclick="updateCartQuantity()">
+      Show Quantity
+    </button>
+
+    <button id="add-to-cart" onclick="cartQuantity++;updateCartQuantity()">
+      Add to Cart
+    </button>
+
+    <button id="add-two" onclick="cartQuantity += 2; updateCartQuantity()">
+      +2
+    </button>
+
+    <button id="add-three" onclick="cartQuantity += 3; updateCartQuantity()">
+      +3
+    </button>
+
+    <button id="add-four" onclick="cartQuantity += 4; updateCartQuantity()">
+      +4
+    </button>
+
+    <button id="add-five" onclick="cartQuantity += 5; updateCartQuantity()">
+      +5
+    </button>
+
+    <button id="remove-cart" onclick=" cartQuantity--; updateCartQuantity()">
+      Remove from cart
+    </button>
+
+    <button id="minus-two" onclick="cartQuantity -= 2; updateCartQuantity()">
+      -2
+    </button>
+
+    <button id="minus-three" onclick="cartQuantity -= 3; updateCartQuantity()">
+      -3
+    </button>
+
+    <button id="reset-cart" onclick="cartQuantity = 0; updateCartQuantity()">
+      Reset Cart
+    </button>
+    <p class="js-output"></p>
+
+    <script>
+      let cartQuantity = 0;
+      const displayElem = document.querySelector('.js-output');
+      function updateCartQuantity() {
+        if(cartQuantity > 11){
+          displayElem.innerHTML = 'You have too many items in your cart!';
+        }else if(cartQuantity < 0){
+          displayElem.innerHTML = 'Cart quantity cannot be negative!';
+        }else{
+          displayElem.innerHTML = `Cart Quantity: ${cartQuantity}`;
+        }
+      }
+    </script>
+  </body>  
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      body{
+        font-family: Arial;
+        padding-bottom: 110px;
+      }
+      .subscribe-btn{
+        background-color: black;
+        color: white;
+        border: none;
+
+        padding: 10px 15px;
+
+        border-radius: 50px;
+        font-weight: 700;
+
+        cursor: pointer;
+        margin-bottom: 35px;
+
+      }
+      .is-subscribed{
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+      .calculate-btn{
+        background-color: green;
+        color: white;
+        border: none;
+
+        padding: 12px 15px;
+        margin-left: 5px;
+
+        font-size: 15px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      input{
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      div{
+        padding-bottom: 10px;
+      }
+      .is-added{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        YouTube Subscribe Button 
+      </p>
+      <button class="js-subscribe-btn subscribe-btn"  onclick="clickSubscribeBtn()" >Subscribe</button>
+    </div>
+    
+    <div>
+      <p>
+      Amazon Shipping calculator<br>
+      Orders under $40 = +$10 shipping.<br>
+      Orders over $40 = FREE shipping.
+      </p>
+      <input type="text" placeholder="Cost of order"  onkeydown="clickEnterKey(event)"/>
+      <button class="calculate-btn" onclick="calculate()">Calculate</button>
+      <p class="output"></p>
+    </div>
+
+    <div>
+      <p>
+      Rock Paper Scissors
+      </p>
+      <a href="">Click here</a>
+    </div>
+    <script>     
+      function clickSubscribeBtn(){
+        let subsElem = document.querySelector('.js-subscribe-btn');
+
+        if(subsElem.innerHTML === 'Subscribe'){
+          subsElem.innerHTML = 'Subscribed';
+          subsElem.classList.add('is-subscribed');
+        }else{
+          subsElem.innerHTML = 'Subscribe';
+          subsElem.classList.remove('is-subscribed');
+        }
+      }
+
+      
+
+      function calculate(){
+        let inputElem = document.querySelector('input');
+        let cost = Number(inputElem.value) * 100;
+
+        let outputElem = document.querySelector('.output');
+
+
+        if(cost < 4000){
+          outputElem.innerHTML = `$${(cost + 1000)/100}`;
+        }
+        else{
+          outputElem.innerHTML = `$${cost/100}`;
+        }
+        if(!cost){
+          outputElem.classList.add('is-added');
+          outputElem.innerHTML = 'Oops! Not a number.';
+        }else if(cost < 0){
+          outputElem.classList.add('is-added');
+          outputElem.innerHTML = 'Error: cost canno be less than $' + cost/100;
+        }
+        else{
+          outputElem.classList.remove('is-added');
+        }
+        
+      }
+
+      function clickEnterKey(event){
+          if(event.key === 'Enter'){
+            calculate();
+          }
+      }
+    </script>
+  </body>  
+</html>

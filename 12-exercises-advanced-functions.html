@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <p>Advanced Functions Exercises</p>
+
+    <button class="js-start-btn">Start</button>
+
+    <button class="js-add-to-cart-btn">Add to cart</button>
+
+    <p class="js-message"></p>
+    <button class="js-add-btn">Add</button>
+    <button class="js-del-btn">Remove</button>
+
+
+    <script>
+
+      document.querySelector('.js-start-btn').addEventListener('click', ()=>{
+        updateButton();
+      })
+      document.querySelector('.js-add-to-cart-btn').addEventListener('click', ()=>{
+        addToCart();
+      })
+      document.querySelector('.js-add-btn').addEventListener('click', ()=>{
+        messages++;
+      })
+      document.querySelector('.js-del-btn').addEventListener('click', ()=>{
+        messages--;
+      })
+
+      //12a
+      const add = function(){
+        console.log(2+3);
+      }
+      add();
+      add();
+
+      //12b
+      function runTwice(fun){
+       fun();
+       fun();
+      }
+      runTwice(() =>{
+        console.log('12b');
+      });
+      runTwice(add);
+
+      //12c
+      function updateButton(){
+        let isStarting = false;
+        setTimeout(() => {
+          if(!isStarting){
+          
+            document.querySelector('.js-start-btn').innerHTML = 'Finished!';
+            isStarting = true;
+          }
+        },1000)
+        
+        document.querySelector('.js-start-btn').innerHTML = 'Loading...';
+  
+      }
+
+      //12e and 11f
+      let timeoutId;
+      function addToCart(){
+        document.querySelector('.js-message').innerHTML = 'Added';
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+          document.querySelector('.js-message').innerHTML = '';
+        },2000)
+      }
+
+      //12g, 12h and 12i
+      let messages = 2;
+      setInterval(() => {
+        if(messages <= 0){
+            document.title = 'App';
+            return;
+          }
+        if(document.title === 'App'){
+          document.title = `${messages} New messages`;
+        }
+        else{
+          document.title = 'App';
+        }
+      },1000)
+
+
+
+      
+    </script>
+  </body>  
+</html>

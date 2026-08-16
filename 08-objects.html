@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <h1>Objects</h1>
+    <p>Objects in JavaScript are collections of key-value pairs. It organizes our data in a structured way.</p>
+
+    <h1>Bracket Notation </h1>
+    <p>Bracket notation is a way to access properties of an object using square brackets. It allows us to use variables or strings as keys.</p>
+
+    <h1>Dot Notation</h1>
+    <p>Dot notation is a way to access properties of an object using a dot followed by the property name. It is a more concise and readable way to access properties.</p>
+
+    <h1>Nested Objects</h1>
+    <p>Nested objects are objects that are contained within other objects. They allow us to create more complex data structures and organize related information together.</p>
+      
+
+
+    <div>
+      
+      // Creating an object<br>
+      const person = {<br>
+        name: "John",<br>
+        age: 30,<br>
+        isStudent: false,<br>
+        greet: function() {<br>
+          return `Hello, my name is ${this.name}.`;<br>
+        }<br>
+      };<br><br><br>
+
+      // Accessing object properties<br>
+      console.log(person.name); // John<br>
+      console.log(person.age); // 30<br>
+      console.log(person.isStudent); // false<br>
+      console.log(person.greet()); // Hello, my name is John.<br><br><br>
+
+      // Adding a new property<br>
+      person.city = "New York";<br>
+      console.log(person.city); // New York<br><br><br>
+
+      // Modifying an existing property<br>
+      person.age = 31;<br>
+      console.log(person.age); // 31<br><br><br>
+
+      // Deleting a property<br>
+      delete person.isStudent;<br>
+      console.log(person.isStudent); // undefined<br>
+    </div>
+
+    <script>
+      // Creating an object
+      const person = {
+        name: "John",
+        age: 30,
+        isStudent: false,
+        ['delivery-time']: '10:00 AM',
+        greet: function() {
+          return `Hello, my name is ${this.name}.`;
+        }
+      };
+
+      // Accessing object properties
+      console.log(person.name); // John
+      console.log(person.age); // 30
+      console.log(person.isStudent); // false
+      console.log(person['delivery-time']); // 10:00 AM
+      console.log(person.greet()); // Hello, my name is John.
+
+      // Adding a new property
+      person.city = "New York";
+      console.log(person.city); // New York
+
+      // Modifying an existing property
+      person.age = 31;
+      console.log(person.age); // 31
+
+      // Deleting a property
+      delete person.isStudent;
+      console.log(person.isStudent); // undefined
+      console.log(console);
+    </script>
+  </body>  
+</html>

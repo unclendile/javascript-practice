@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <p>Advanced Functions</p>
+    <p>
+      We learnt about setInterval(), setTimeout(), interval ID.
+      <br>setInterval() is infinite unless we stop it by interval id.
+    </p>
+    <p>
+      we also learnt about forEach() and arrow function
+    </p>
+    <p>
+      .addEventListener() => lets us run some code when we interact with the element. it sort does the same thing as onclick.<br>
+      it has 2 paremeters<br>
+      1. event (what type of interact we want to listen for)
+      <br>
+      2. function we want to run
+    </p>
+    <p>
+      .removeEventListener()
+    </p>
+
+    <button onclick="" class="js-button">Click</button>
+
+
+    <script>
+      const buttonElem = document.querySelector('.js-button');
+
+      buttonElem.addEventListener('click',() =>{
+        console.log('clicked')
+      });
+
+      const click = () =>{
+        console.log('clicked')
+      }
+
+      /*
+      setTimeout(
+        function(){
+          console.log('hello')
+        },2000
+      )
+
+      setInterval(
+        function(){
+          console.log('hey')
+        },3000
+      )
+      */
+
+      /*
+      const array = ['andile','syabonga','luya','sanel','juniour','lwazi','londy'];
+
+      const newArray = array.slice().reverse();
+      
+      newArray.forEach((element,i) => {
+        console.log(i)
+        console.log(element)
+      });
+      */
+      /*
+      function greet(h){
+        console.log(h);
+      }
+      const greeting = h =>{
+        console.log(h)
+      }
+        
+      greet('Hello');
+      greeting('Hello world');
+
+      const hy = h => h;
+      console.log(hy('hey'));
+
+      const obj2 = {
+        method: () => {
+
+        },
+        method(){
+
+        }
+      }
+
+      */
+
+
+    </script>
+  </body>  
+</html>

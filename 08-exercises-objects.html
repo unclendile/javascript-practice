@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects Exercises</title>
+  </head>
+  <body>
+
+    <button onclick="playGame('heads')">heads</button>
+    <button onclick="playGame('tails')">tails</button>
+
+    <script>
+      //8a.
+      const product = {
+        name: 'basketball',
+        price:2095
+      }
+
+      //8b.
+      product.price += 500;
+      console.log(product)
+
+      //8c.
+      product['delivery-time'] = '3 days';
+      console.log(product);
+
+      //8d.
+      function comparePrice(product1, product2){
+        if(product1.price < product2.price){
+          return product1;
+        }else{
+          return product2
+        }
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(comparePrice(product1,product2));
+
+      //8e.
+      function isSameProduct(product1,product2){
+        if(product1.name === product2.name && product1.price === product2.price){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+
+      const product3 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      console.log(isSameProduct(product1,product2));
+      console.log(isSameProduct(product1,product3));
+
+      //8f.
+      const str = 'Good morning';
+      console.log(str.toLowerCase());
+
+      //8g.
+      const st = 'test';
+      console.log(st.repeat(2));
+
+      //8i.
+      let result = '';
+      let guess = 'heads' || 'tails';
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses:0
+      }
+
+      
+      function computerGuess(){
+        let randomNumber = Math.random();
+        
+        if(randomNumber < 0.5){
+          return  "heads";
+        }else{
+          return "tails";
+        }
+      }
+
+      function playGame(guess){
+        const comG = computerGuess();
+        //const result = '';
+
+        if(guess === comG){
+          result = 'you win'
+        }
+        else{
+          result = 'you lose';
+        }
+
+        if(result === 'you win'){
+          score.wins++;
+        }else{
+          score.losses++;
+        }
+
+        localStorage.setItem('score', JSON.stringify(score));
+        alert(`${guess} and ${comG}, ${result}\nWins: ${score.wins} Losses: ${score.losses}`);
+      }
+
+      function setScore(){
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+
+      console.log(setScore());
+
+    </script>
+  </body>  
+</html>
